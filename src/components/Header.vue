@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     changeTitle() {
-      this.title = "Kiki's Ninjas"
+      this.$emit('changeTitle', 'Khariokis Wizards')
     }
   },
 }
