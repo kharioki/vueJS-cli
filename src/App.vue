@@ -1,16 +1,22 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
+    <app-header></app-header>
     <ninjas></ninjas>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-import Ninjas from './Ninjas.vue'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+import Ninjas from './components/Ninjas.vue'
 
 export default {
   components: {
-    'ninjas': Ninjas,
+    'app-header': Header,
+    'app-footer': Footer,
+    'ninjas': Ninjas
+
   },
   data () {
     return {
@@ -21,7 +27,5 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  color: purple;
-}
+
 </style>
