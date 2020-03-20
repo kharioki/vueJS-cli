@@ -1,21 +1,15 @@
 <template>
   <div>
-    <keep-alive>
-      <component v-bind:is="component"></component>
-    </keep-alive>
-    <button v-on:click="component = 'form-one'">Show form one</button>
-    <button v-on:click="component = 'form-two'">Show form two</button>
+    <add-blog></add-blog>
   </div>
 </template>
 
 <script>
-import formOne from './components/formOne.vue'
-import formTwo from './components/formTwo.vue'
+import addBlog from './components/addBlog';
 
 export default {
   components: {
-    'form-one': formOne,
-    'form-two': formTwo,
+    'add-blog': addBlog,
   },
   data () {
     return {
@@ -27,5 +21,8 @@ export default {
 </script>
 
 <style scoped>
-
+body {
+  margin: 0;
+  font-family: 'Nunito SeniBold';
+}
 </style>
