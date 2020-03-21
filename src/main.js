@@ -35,6 +35,10 @@ Vue.filter('snippet', value => {
   return value.slice(0, 100) + '...';
 });
 
+Vue.filter('capitalize', value => {
+  return value.charAt(0).toUpperCase() + value.slice(1);
+});
+
 new Vue({
   el: '#app',
   render: h => h(App)
