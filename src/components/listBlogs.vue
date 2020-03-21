@@ -1,10 +1,9 @@
 <template>
   <div id="show-blogs">
-      <h1>All Blog Articles</h1>
+      <h1>List Blog Titles</h1>
       <input type="text" v-model="search" placeholder="search blogs" />
       <div v-for="blog in filteredBlogs" class="single-blog">
-          <h2 v-rainbow>{{ blog.title | toUppercase }}</h2>
-          <article>{{ blog.body | snippet }}</article>
+          <h2 v-rainbow>{{ blog.title | capitalize }}</h2>
       </div>
   </div>
 </template>
@@ -32,6 +31,9 @@ export default {
   filters: {
       toUppercase(value) {
         return value.toUpperCase();
+      },
+      capitalize(value) {
+        return value.charAt(0).toUpperCase() + value.slice(1);
       }
   },
   directives: {
