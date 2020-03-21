@@ -24,7 +24,16 @@ Vue.directive('theme', {
       el.style.padding = '20px';
     }
   }
-})
+});
+
+// Filters
+Vue.filter('to-uppercase', value => {
+  return value.toUpperCase()
+});
+
+Vue.filter('snippet', value => {
+  return value.slice(0, 100) + '...';
+});
 
 new Vue({
   el: '#app',
